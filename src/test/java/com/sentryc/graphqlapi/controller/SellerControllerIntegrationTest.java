@@ -1,4 +1,4 @@
-package com.sentryc.graphqlapi.resolver;
+package com.sentryc.graphqlapi.controller;
 
 import com.github.database.rider.core.api.configuration.DBUnit;
 import com.github.database.rider.core.api.dataset.DataSet;

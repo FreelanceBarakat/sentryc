@@ -28,6 +28,14 @@ public class SellerServiceImpl {
     private final SellerFilterMapper sellerFilterMapper;
     private final static int MAX_ALLOWED_PAGE_SIZE = 30;
 
+    /**
+     * It's worth mentioning that the customer can't request for more than @MAX_ALLOWED_PAGE_SIZE of size for a page!
+     *
+     * @param filterDto
+     * @param page
+     * @param sortBy
+     * @return
+     */
     @Cacheable(value = "sellers", key = "{#filterDto, #page, #sortBy}")
     public SellerPageableResponse getSellers(final SellerFilterDTO filterDto, final PageInput page, final SellerSortBy sortBy) {
         log.info("getting sellers with filters={}, page={}, sort-by={}", filterDto, page, sortBy);

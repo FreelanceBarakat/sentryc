@@ -16,7 +16,6 @@ import java.util.UUID;
 @Repository
 public interface SellerRepository extends PagingAndSortingRepository<Seller, UUID>, CrudRepository<Seller, UUID> {
 
-
     @Query("SELECT seller FROM Seller seller WHERE " +
             // Avoided using %:#{#filter.searchByName}% to fully utilize the index,
             //  since using wildcards will prevent using the index

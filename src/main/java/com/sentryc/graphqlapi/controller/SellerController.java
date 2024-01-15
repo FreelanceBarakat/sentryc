@@ -1,4 +1,4 @@
-package com.sentryc.graphqlapi.resolver;
+package com.sentryc.graphqlapi.controller;
 
 import com.sentryc.graphqlapi.dto.PageInput;
 import com.sentryc.graphqlapi.dto.SellerFilterDTO;
@@ -7,14 +7,15 @@ import com.sentryc.graphqlapi.dto.SellerSortBy;
 import com.sentryc.graphqlapi.service.SellerServiceImpl;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
 
+/**
+ * Simple controller to resolve graphql requests
+ */
 @RequiredArgsConstructor
 @Controller
-@Slf4j
 public class SellerController {
 
     private final SellerServiceImpl sellerServiceImpl;

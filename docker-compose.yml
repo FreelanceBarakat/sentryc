@@ -17,7 +17,7 @@ services:
       dockerfile: Dockerfile.Dockerfile
 
     environment:
-      KAFKA_HOST: "http://broker:29094"
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/postgres
       DOCKER_BUILDKIT: 1
     depends_on:
       - db
