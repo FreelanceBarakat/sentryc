@@ -15,7 +15,7 @@
     <description>sentryc</description>
     <properties>
         <maven.plugin.project.version>3.8.0</maven.plugin.project.version>
-        <maven-jar-plugin.mainClass>com.sentryc.graphqlapi.SentrycApplication.java</maven-jar-plugin.mainClass>
+        <maven-jar-plugin.mainClass>com.sentryc.graphqlapi.SentrycApplication</maven-jar-plugin.mainClass>
 
         <mapstruct.version>1.6.0.Beta1</mapstruct.version>
         <lombok-mapstruct-version>0.2.0</lombok-mapstruct-version>
@@ -31,6 +31,7 @@
         <rider-junit5.version>1.36.0</rider-junit5.version>
         <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
         <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
+
     </properties>
     <dependencies>
         <!-- Spring Boot Starter Web -->
