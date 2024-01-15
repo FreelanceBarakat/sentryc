@@ -1,0 +1,30 @@
+query {
+    sellers(
+        filter: {
+            searchByName: "TestSellerInfo1",
+            producerIds: ["11111111-1111-1111-1111-111111111111"],
+            marketplaceIds: ["TestMarketplaceId1"]
+        },
+        page: {
+            page: 0,
+            size: 10
+        },
+        sortBy: NAME_ASC
+    ) {
+        meta {
+            page
+            size
+        }
+        data {
+            sellerName
+            externalId
+            producerSellerStates {
+                producerId
+                producerName
+                sellerState
+                sellerId
+            }
+            marketplaceId
+        }
+    }
+}

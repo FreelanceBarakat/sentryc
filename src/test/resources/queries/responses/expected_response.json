@@ -1,0 +1,25 @@
+{
+  "data": {
+    "sellers": {
+      "meta": {
+        "page": 0,
+        "size": 1
+      },
+      "data": [
+        {
+          "sellerName": "TestSellerInfo1",
+          "externalId": "amazon.nl",
+          "producerSellerStates": [
+            {
+              "producerId": "11111111-1111-1111-1111-111111111111",
+              "producerName": "TestProducer1",
+              "sellerState": "REGULAR",
+              "sellerId": "33333333-3333-3333-3333-333333333333"
+            }
+          ],
+          "marketplaceId": "TestMarketplaceId1"
+        }
+      ]
+    }
+  }
+}

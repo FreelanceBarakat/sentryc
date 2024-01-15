@@ -1,0 +1,4 @@
+type SellerPageableResponse {
+    meta: PageMeta!
+    data: [Seller!]!
+}

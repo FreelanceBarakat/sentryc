@@ -1,0 +1,20 @@
+type Seller {
+    sellerName: String
+    externalId: String!
+    producerSellerStates: [ProducerSellerState]!
+    marketplaceId: String
+}
+
+type ProducerSellerState {
+    producerId: ID!
+    producerName: String!
+    sellerState: SellerState!
+    sellerId: ID!
+}
+
+enum SellerState {
+    REGULAR
+    WHITELISTED
+    GREYLISTED
+    BLACKLISTED
+}

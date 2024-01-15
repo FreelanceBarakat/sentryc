@@ -1,0 +1,36 @@
+# Spring Data Source Configuration
+spring:
+  datasource:
+    #    url: jdbc:postgresql://db:5432/postgres /
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  # Liquibase Configuration
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.yaml
+    default-schema: public
+    liquibase-schema: public
+  graphql:
+    schema:
+      printer:
+        enabled: true
+    graphiql:
+      enabled: true
+
+graphql:
+  servlet:
+    max-query-depth: 100
+
+# Server Configuration
+server:
+  port: 8080
+
+logging:
+  level:
+    liquibase: debug

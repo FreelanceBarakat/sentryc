@@ -1,0 +1,28 @@
+version: '3.3'
+services:
+  db:
+    image: postgres:14.1-alpine
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=order_service_db
+
+
+  graphql-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.Dockerfile
+
+    environment:
+      KAFKA_HOST: "http://broker:29094"
+      DOCKER_BUILDKIT: 1
+    depends_on:
+      - db
+
+
+volumes:
+  db:
+    driver: local

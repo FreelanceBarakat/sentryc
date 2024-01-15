@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - include:
+      file: "db/changelog/001-create-producers-table.yaml"
+  - include:
+      file: "db/changelog/002-create-marketplaces-table.yaml"
+  - include:
+      file: "db/changelog/003-create-seller-infos-table.yaml"
+  - include:
+      file: "db/changelog/004-create-sellers-table.yaml"
+  - include:
+      file: "db/changelog/005-init-tables.yaml"
+
+
+
+
