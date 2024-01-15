@@ -1,0 +1,4 @@
+type Marketplace {
+    id: String!
+    description: String
+}

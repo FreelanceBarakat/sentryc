@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: 003
+      author: moustafa.barakat
+      preConditions:
+        - onFail: MARK_RAN
+        - not:
+            - tableExists:
+                tableName: seller_infos
+      changes:
+        - createTable:
+            tableName: seller_infos
+            #            schemaName: public
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: marketplace_id
+                  type: varchar(255)
+                  constraints:
+                    references: marketplaces(id)
+                    foreignKeyName: "fk_marketplace"
+              - column:
+                  name: name
+                  type: varchar(2048)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: url
+                  type: varchar(2048)
+              - column:
+                  name: country
+                  type: varchar(255)
+              - column:
+                  name: external_id
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

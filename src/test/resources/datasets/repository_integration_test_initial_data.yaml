@@ -1,0 +1,37 @@
+producers:
+  - id: '11111111-1111-1111-1111-111111111111'
+    name: TestProducer1
+    created_at: '2024-01-01 00:00:00'
+  - id: '22222222-2222-2222-2222-222222222222'
+    name: TestProducer2
+    created_at: '2024-01-01 00:00:00'
+
+marketplaces:
+  - id: 'TestMarketplaceId1'
+    description: TestMarketplaceDescription1
+  - id: 'TestMarketplaceId2'
+    description: TestMarketplaceDescription2
+
+seller_infos:
+  - id: '11111111-1111-1111-1111-111111111111'
+    marketplace_id: 'TestMarketplaceId1'
+    name: TestSellerInfo1
+    url: https://test-seller-info1.com
+    country: TestCountry1
+    external_id: amazon.nl
+  - id: '22222222-2222-2222-2222-222222222222'
+    marketplace_id: 'TestMarketplaceId2'
+    name: TestSellerInfo2
+    url: https://test-seller-info2.com
+    country: TestCountry2
+    external_id: zalando.de
+
+sellers:
+  - id: '33333333-3333-3333-3333-333333333333'
+    producer_id: '11111111-1111-1111-1111-111111111111'
+    seller_info_id: '11111111-1111-1111-1111-111111111111'
+    state: REGULAR
+  - id: '44444444-4444-4444-4444-444444444444'
+    producer_id: '22222222-2222-2222-2222-222222222222'
+    seller_info_id: '22222222-2222-2222-2222-222222222222'
+    state: WHITELISTED

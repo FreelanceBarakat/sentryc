@@ -1,0 +1,4 @@
+type PageMeta {
+    page: Int!
+    size: Int!
+}

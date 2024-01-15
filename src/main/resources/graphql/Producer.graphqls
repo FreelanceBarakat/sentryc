@@ -1,0 +1,5 @@
+type Producer {
+    id: ID!
+    name: String
+    createdAt: String!
+}

@@ -1,0 +1,8 @@
+type SellerInfo {
+    id: ID!
+    marketplaceId: String!
+    name: String!
+    url: String
+    country: String
+    externalId: String!
+}
